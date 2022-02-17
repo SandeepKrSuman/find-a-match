@@ -8,14 +8,18 @@ export default function EmojiCard() {
 
   return (
     <Fragment>
-      <Grid
-        className="emoji-container"
-        item
-        xs={3}
-        onClick={() => setFlipped(!isFlipped)}
-      >
-        <div className={`${isFlipped ? "card is-flipped" : "card"}`}>
-          <div className="card__face card__face--front">front</div>
+      <Grid className="emoji-container" item xs={3}>
+        <div
+          className={`${isFlipped ? "card is-flipped" : "card"}`}
+          onClick={() => setFlipped(!isFlipped)}
+        >
+          <div className="card__face card__face--front">
+            <img
+              className="emoji emoji-front"
+              alt="emoji"
+              src="/logo-grey.png"
+            />
+          </div>
           <div className="card__face card__face--back">
             <img className="emoji" alt="emoji" src="/fam-logo.png" />
           </div>
