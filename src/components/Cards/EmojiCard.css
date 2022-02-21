@@ -5,6 +5,7 @@
     rgba(60, 64, 67, 0.25) 0px 1px 3px 1px;
   border-radius: 4px;
   cursor: pointer;
+  padding: 5%;
 }
 
 .emoji-front {
