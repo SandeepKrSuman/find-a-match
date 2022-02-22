@@ -8,7 +8,6 @@ const emojis = drawer();
 
 export default function PlayGround() {
   const [store, setStore] = useState(null);
-  console.log(store);
   return (
     <Container maxWidth="sm">
       <Grid container columnSpacing={2} rowSpacing={4}>
