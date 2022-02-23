@@ -26,12 +26,12 @@ const handleClick = (store, setStore, emojiId, setFlipped) => {
     setStore(emojiId);
     setFlipped(true);
   } else {
-    if (emojiId != store) {
+    if (emojiId !== store) {
       setFlipped(true);
       var delayInMilliseconds = 800;
       setTimeout(function () {
         setFlipped(false);
-        setStore(null);
+        // setStore(null);
       }, delayInMilliseconds);
     }
   }
