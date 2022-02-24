@@ -31,7 +31,6 @@ const handleClick = (store, setStore, emojiId, setFlipped) => {
       var delayInMilliseconds = 800;
       setTimeout(function () {
         setFlipped(false);
-        // setStore(null);
       }, delayInMilliseconds);
     }
   }
