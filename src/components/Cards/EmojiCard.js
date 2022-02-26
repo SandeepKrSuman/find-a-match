@@ -5,9 +5,11 @@ import "./EmojiCard.css";
 
 export default function EmojiCard(props) {
   const [isFlipped, setFlipped] = useState(false);
+  const [firstClicked, setFirstClicked] = useState(null);
 
-  function handleClick() {
-    props.execute(setFlipped);
+  function handleClick(event) {
+    setFirstClicked(event.currentTarget);
+    props.execute(setFlipped, firstClicked, setFirstClicked);
   }
 
   return (
