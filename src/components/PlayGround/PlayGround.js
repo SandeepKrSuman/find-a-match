@@ -8,6 +8,7 @@ const emojis = drawer();
 
 export default function PlayGround() {
   const [store, setStore] = useState(null);
+  const [elem, setElem] = useState(null);
   return (
     <Container maxWidth="sm">
       <Grid container columnSpacing={2} rowSpacing={4}>
@@ -15,8 +16,17 @@ export default function PlayGround() {
           return (
             <EmojiCard
               key={index}
-              execute={(setFlipped) =>
-                handleClick(store, setStore, emoji, setFlipped)
+              usekey={index}
+              execute={(setFlipped, elemid) =>
+                handleClick(
+                  store,
+                  setStore,
+                  emoji,
+                  setFlipped,
+                  elem,
+                  setElem,
+                  elemid
+                )
               }
               imgId={emoji}
             />

@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 let assetArray = [1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6];
 
 const shuffle = (arr) => {
@@ -21,9 +19,18 @@ const drawer = () => {
   return assetArray;
 };
 
-const handleClick = (store, setStore, emojiId, setFlipped) => {
+const handleClick = (
+  store,
+  setStore,
+  emojiId,
+  setFlipped,
+  elem,
+  setElem,
+  elemid
+) => {
   if (!store) {
     setStore(emojiId);
+    setElem(elemid);
     setFlipped(true);
   } else {
     if (emojiId !== store) {
@@ -31,6 +38,9 @@ const handleClick = (store, setStore, emojiId, setFlipped) => {
       var delayInMilliseconds = 800;
       setTimeout(function () {
         setFlipped(false);
+        document.getElementById(elem).classList.remove("is-flipped");
+        setStore(null);
+        setElem(null);
       }, delayInMilliseconds);
     }
   }
