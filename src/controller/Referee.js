@@ -43,6 +43,11 @@ const handleClick = (
         setElem(null);
       }, delayInMilliseconds);
     }
+    if (emojiId === store) {
+      setFlipped(true);
+      setStore(null);
+      setElem(null);
+    }
   }
 };
 
