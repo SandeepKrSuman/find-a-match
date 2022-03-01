@@ -3,20 +3,15 @@ import Grid from "@mui/material/Grid";
 import "./EmojiCard.css";
 
 export default function EmojiCard(props) {
-  const [isFlipped, setFlipped] = useState(false);
-
-  function handleClick(e) {
-    const elemid = e.currentTarget.id;
-    props.execute(setFlipped, elemid);
-  }
-
   return (
     <Fragment>
       <Grid className="emoji-container" item xs={3}>
         <div
-          className={`${isFlipped ? "card is-flipped" : "card"}`}
+          className={`${props.show ? "card is-flipped" : "card"}`}
           id={`card-${props.usekey}`}
-          onClick={handleClick}
+          onClick={() => {
+            props.execute();
+          }}
         >
           <div className="card__face card__face--front">
             <img

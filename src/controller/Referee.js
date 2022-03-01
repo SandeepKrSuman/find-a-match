@@ -19,34 +19,30 @@ const drawer = () => {
   return assetArray;
 };
 
-const handleClick = (
-  store,
-  setStore,
-  emojiId,
-  setFlipped,
-  elem,
-  setElem,
-  elemid
-) => {
+const handleClick = (flip, store, setStore, emojiId, currElem, setCurrElem) => {
   if (!store) {
+    flip(true);
     setStore(emojiId);
-    setElem(elemid);
-    setFlipped(true);
+    const fl = {
+      fliplast: (x) => {
+        flip(x);
+      },
+    };
+    setCurrElem(fl);
   } else {
     if (emojiId !== store) {
-      setFlipped(true);
+      flip(true);
       var delayInMilliseconds = 800;
       setTimeout(function () {
-        setFlipped(false);
-        document.getElementById(elem).classList.remove("is-flipped");
-        setStore(null);
-        setElem(null);
+        flip(false);
+        currElem.fliplast(false);
       }, delayInMilliseconds);
-    }
-    if (emojiId === store) {
-      setFlipped(true);
       setStore(null);
-      setElem(null);
+      setCurrElem(null);
+    } else if (emojiId === store) {
+      flip(true);
+      setStore(null);
+      setCurrElem(null);
     }
   }
 };

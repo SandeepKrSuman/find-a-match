@@ -7,31 +7,192 @@ import { handleClick, drawer } from "../../controller/Referee";
 const emojis = drawer();
 
 export default function PlayGround() {
+  const [flip1, setFlip1] = useState(false);
+  const [flip2, setFlip2] = useState(false);
+  const [flip3, setFlip3] = useState(false);
+  const [flip4, setFlip4] = useState(false);
+  const [flip5, setFlip5] = useState(false);
+  const [flip6, setFlip6] = useState(false);
+  const [flip7, setFlip7] = useState(false);
+  const [flip8, setFlip8] = useState(false);
+  const [flip9, setFlip9] = useState(false);
+  const [flip10, setFlip10] = useState(false);
+  const [flip11, setFlip11] = useState(false);
+  const [flip12, setFlip12] = useState(false);
   const [store, setStore] = useState(null);
-  const [elem, setElem] = useState(null);
+  const [currElem, setCurrElem] = useState(null);
+
   return (
     <Container maxWidth="sm">
       <Grid container columnSpacing={2} rowSpacing={4}>
-        {emojis.map((emoji, index) => {
-          return (
-            <EmojiCard
-              key={index}
-              usekey={index}
-              execute={(setFlipped, elemid) =>
-                handleClick(
-                  store,
-                  setStore,
-                  emoji,
-                  setFlipped,
-                  elem,
-                  setElem,
-                  elemid
-                )
-              }
-              imgId={emoji}
-            />
-          );
-        })}
+        <EmojiCard
+          imgId={emojis[0]}
+          show={flip1}
+          execute={() => {
+            handleClick(
+              setFlip1,
+              store,
+              setStore,
+              emojis[0],
+              currElem,
+              setCurrElem
+            );
+          }}
+        />
+        <EmojiCard
+          imgId={emojis[1]}
+          show={flip2}
+          execute={() => {
+            handleClick(
+              setFlip2,
+              store,
+              setStore,
+              emojis[1],
+              currElem,
+              setCurrElem
+            );
+          }}
+        />
+        <EmojiCard
+          imgId={emojis[2]}
+          show={flip3}
+          execute={() => {
+            handleClick(
+              setFlip3,
+              store,
+              setStore,
+              emojis[2],
+              currElem,
+              setCurrElem
+            );
+          }}
+        />
+        <EmojiCard
+          imgId={emojis[3]}
+          show={flip4}
+          execute={() => {
+            handleClick(
+              setFlip4,
+              store,
+              setStore,
+              emojis[3],
+              currElem,
+              setCurrElem
+            );
+          }}
+        />
+        <EmojiCard
+          imgId={emojis[4]}
+          show={flip5}
+          execute={() => {
+            handleClick(
+              setFlip5,
+              store,
+              setStore,
+              emojis[4],
+              currElem,
+              setCurrElem
+            );
+          }}
+        />
+        <EmojiCard
+          imgId={emojis[5]}
+          show={flip6}
+          execute={() => {
+            handleClick(
+              setFlip6,
+              store,
+              setStore,
+              emojis[5],
+              currElem,
+              setCurrElem
+            );
+          }}
+        />
+        <EmojiCard
+          imgId={emojis[6]}
+          show={flip7}
+          execute={() => {
+            handleClick(
+              setFlip7,
+              store,
+              setStore,
+              emojis[6],
+              currElem,
+              setCurrElem
+            );
+          }}
+        />
+        <EmojiCard
+          imgId={emojis[7]}
+          show={flip8}
+          execute={() => {
+            handleClick(
+              setFlip8,
+              store,
+              setStore,
+              emojis[7],
+              currElem,
+              setCurrElem
+            );
+          }}
+        />
+        <EmojiCard
+          imgId={emojis[8]}
+          show={flip9}
+          execute={() => {
+            handleClick(
+              setFlip9,
+              store,
+              setStore,
+              emojis[8],
+              currElem,
+              setCurrElem
+            );
+          }}
+        />
+        <EmojiCard
+          imgId={emojis[9]}
+          show={flip10}
+          execute={() => {
+            handleClick(
+              setFlip10,
+              store,
+              setStore,
+              emojis[9],
+              currElem,
+              setCurrElem
+            );
+          }}
+        />
+        <EmojiCard
+          imgId={emojis[10]}
+          show={flip11}
+          execute={() => {
+            handleClick(
+              setFlip11,
+              store,
+              setStore,
+              emojis[10],
+              currElem,
+              setCurrElem
+            );
+          }}
+        />
+        <EmojiCard
+          imgId={emojis[11]}
+          show={flip12}
+          execute={() => {
+            handleClick(
+              setFlip12,
+              store,
+              setStore,
+              emojis[11],
+              currElem,
+              setCurrElem
+            );
+          }}
+        />
       </Grid>
     </Container>
   );
