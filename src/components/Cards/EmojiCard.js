@@ -7,7 +7,7 @@ export default function EmojiCard(props) {
     <Fragment>
       <Grid className="emoji-container" item xs={4} md={3}>
         <div
-          className={`${props.show ? "card is-flipped" : "card"}`}
+          className={`${props.show ? "card is-flipped do-not-click" : "card"}`}
           id={`card-${props.usekey}`}
           onClick={() => {
             props.execute();

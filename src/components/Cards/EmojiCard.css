@@ -60,6 +60,10 @@
   transform: rotateY(180deg);
 }
 
+.do-not-click {
+  pointer-events: none;
+}
+
 @media (min-width: 455px) and (max-width: 992px) {
   .card {
     height: 10rem;
