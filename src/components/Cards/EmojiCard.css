@@ -17,6 +17,7 @@
     rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; */
   text-align: center;
   /* height: 100px; */
+  /* margin-bottom: 3%; */
 }
 
 .emoji-container:hover {
@@ -31,8 +32,8 @@
 
 .card {
   position: relative;
-  width: 100px;
-  height: 100px;
+  width: 90%;
+  height: 7rem;
   cursor: pointer;
   transform-style: preserve-3d;
   transform-origin: center right;
@@ -57,4 +58,10 @@
 
 .card__face--back {
   transform: rotateY(180deg);
+}
+
+@media (min-width: 455px) and (max-width: 992px) {
+  .card {
+    height: 10rem;
+  }
 }

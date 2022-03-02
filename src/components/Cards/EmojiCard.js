@@ -5,7 +5,7 @@ import "./EmojiCard.css";
 export default function EmojiCard(props) {
   return (
     <Fragment>
-      <Grid className="emoji-container" item xs={3}>
+      <Grid className="emoji-container" item xs={4} md={3}>
         <div
           className={`${props.show ? "card is-flipped" : "card"}`}
           id={`card-${props.usekey}`}
