@@ -19,7 +19,18 @@ const drawer = () => {
   return assetArray;
 };
 
-const handleClick = (flip, store, setStore, emojiId, currElem, setCurrElem) => {
+const handleClick = (
+  flip,
+  store,
+  setStore,
+  emojiId,
+  currElem,
+  setCurrElem,
+  move,
+  setMove,
+  matchFound,
+  setMatchFound
+) => {
   if (!store) {
     flip(true);
     setStore(emojiId);
@@ -30,6 +41,7 @@ const handleClick = (flip, store, setStore, emojiId, currElem, setCurrElem) => {
     };
     setCurrElem(fl);
   } else {
+    setMove(move + 1);
     if (emojiId !== store) {
       flip(true);
       var delayInMilliseconds = 800;
@@ -40,6 +52,7 @@ const handleClick = (flip, store, setStore, emojiId, currElem, setCurrElem) => {
       setStore(null);
       setCurrElem(null);
     } else if (emojiId === store) {
+      setMatchFound(matchFound + 1);
       flip(true);
       setStore(null);
       setCurrElem(null);

@@ -23,10 +23,12 @@ export default function PlayGround() {
   const [flip12, setFlip12] = useState(false);
   const [store, setStore] = useState(null);
   const [currElem, setCurrElem] = useState(null);
+  const [move, setMove] = useState(0);
+  const [matchFound, setMatchFound] = useState(0);
 
   return (
     <Container maxWidth="sm">
-      <ScoreSheet />
+      <ScoreSheet moves={move} matches={matchFound} />
       <Grid container columnSpacing={2} rowSpacing={4}>
         <EmojiCard
           imgId={emojis[0]}
@@ -38,7 +40,11 @@ export default function PlayGround() {
               setStore,
               emojis[0],
               currElem,
-              setCurrElem
+              setCurrElem,
+              move,
+              setMove,
+              matchFound,
+              setMatchFound
             );
           }}
         />
@@ -52,7 +58,11 @@ export default function PlayGround() {
               setStore,
               emojis[1],
               currElem,
-              setCurrElem
+              setCurrElem,
+              move,
+              setMove,
+              matchFound,
+              setMatchFound
             );
           }}
         />
@@ -66,7 +76,11 @@ export default function PlayGround() {
               setStore,
               emojis[2],
               currElem,
-              setCurrElem
+              setCurrElem,
+              move,
+              setMove,
+              matchFound,
+              setMatchFound
             );
           }}
         />
@@ -80,7 +94,11 @@ export default function PlayGround() {
               setStore,
               emojis[3],
               currElem,
-              setCurrElem
+              setCurrElem,
+              move,
+              setMove,
+              matchFound,
+              setMatchFound
             );
           }}
         />
@@ -94,7 +112,11 @@ export default function PlayGround() {
               setStore,
               emojis[4],
               currElem,
-              setCurrElem
+              setCurrElem,
+              move,
+              setMove,
+              matchFound,
+              setMatchFound
             );
           }}
         />
@@ -108,7 +130,11 @@ export default function PlayGround() {
               setStore,
               emojis[5],
               currElem,
-              setCurrElem
+              setCurrElem,
+              move,
+              setMove,
+              matchFound,
+              setMatchFound
             );
           }}
         />
@@ -122,7 +148,11 @@ export default function PlayGround() {
               setStore,
               emojis[6],
               currElem,
-              setCurrElem
+              setCurrElem,
+              move,
+              setMove,
+              matchFound,
+              setMatchFound
             );
           }}
         />
@@ -136,7 +166,11 @@ export default function PlayGround() {
               setStore,
               emojis[7],
               currElem,
-              setCurrElem
+              setCurrElem,
+              move,
+              setMove,
+              matchFound,
+              setMatchFound
             );
           }}
         />
@@ -150,7 +184,11 @@ export default function PlayGround() {
               setStore,
               emojis[8],
               currElem,
-              setCurrElem
+              setCurrElem,
+              move,
+              setMove,
+              matchFound,
+              setMatchFound
             );
           }}
         />
@@ -164,7 +202,11 @@ export default function PlayGround() {
               setStore,
               emojis[9],
               currElem,
-              setCurrElem
+              setCurrElem,
+              move,
+              setMove,
+              matchFound,
+              setMatchFound
             );
           }}
         />
@@ -178,7 +220,11 @@ export default function PlayGround() {
               setStore,
               emojis[10],
               currElem,
-              setCurrElem
+              setCurrElem,
+              move,
+              setMove,
+              matchFound,
+              setMatchFound
             );
           }}
         />
@@ -192,13 +238,22 @@ export default function PlayGround() {
               setStore,
               emojis[11],
               currElem,
-              setCurrElem
+              setCurrElem,
+              move,
+              setMove,
+              matchFound,
+              setMatchFound
             );
           }}
         />
       </Grid>
       <div style={{ textAlign: "center", marginTop: "7%" }}>
-        <Button variant="outlined" size="large" color="error" disabled>
+        <Button
+          variant="outlined"
+          size="large"
+          color="error"
+          disabled={move === 0 ? true : false}
+        >
           Restart
         </Button>
       </div>
