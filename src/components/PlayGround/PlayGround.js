@@ -3,6 +3,8 @@ import EmojiCard from "../Cards/EmojiCard";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import { handleClick, drawer } from "../../controller/Referee";
+import ScoreSheet from "../ScoreSheet/ScoreSheet";
+import Button from "@mui/material/Button";
 
 const emojis = drawer();
 
@@ -24,6 +26,7 @@ export default function PlayGround() {
 
   return (
     <Container maxWidth="sm">
+      <ScoreSheet />
       <Grid container columnSpacing={2} rowSpacing={4}>
         <EmojiCard
           imgId={emojis[0]}
@@ -194,6 +197,11 @@ export default function PlayGround() {
           }}
         />
       </Grid>
+      <div style={{ textAlign: "center", marginTop: "7%" }}>
+        <Button variant="outlined" size="large" color="error" disabled>
+          Restart
+        </Button>
+      </div>
     </Container>
   );
 }
