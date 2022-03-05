@@ -21,10 +21,6 @@ export default function PlayGround() {
   const [flip10, setFlip10] = useState(false);
   const [flip11, setFlip11] = useState(false);
   const [flip12, setFlip12] = useState(false);
-  const [flip13, setFlip13] = useState(false);
-  const [flip14, setFlip14] = useState(false);
-  const [flip15, setFlip15] = useState(false);
-  const [flip16, setFlip16] = useState(false);
   const [store, setStore] = useState(null);
   const [currElem, setCurrElem] = useState(null);
   const [move, setMove] = useState(0);
@@ -241,78 +237,6 @@ export default function PlayGround() {
               store,
               setStore,
               emojis[11],
-              currElem,
-              setCurrElem,
-              move,
-              setMove,
-              matchFound,
-              setMatchFound
-            );
-          }}
-        />
-        <EmojiCard
-          imgId={emojis[12]}
-          show={flip13}
-          execute={() => {
-            handleClick(
-              setFlip13,
-              store,
-              setStore,
-              emojis[12],
-              currElem,
-              setCurrElem,
-              move,
-              setMove,
-              matchFound,
-              setMatchFound
-            );
-          }}
-        />
-        <EmojiCard
-          imgId={emojis[13]}
-          show={flip14}
-          execute={() => {
-            handleClick(
-              setFlip14,
-              store,
-              setStore,
-              emojis[13],
-              currElem,
-              setCurrElem,
-              move,
-              setMove,
-              matchFound,
-              setMatchFound
-            );
-          }}
-        />
-        <EmojiCard
-          imgId={emojis[14]}
-          show={flip15}
-          execute={() => {
-            handleClick(
-              setFlip15,
-              store,
-              setStore,
-              emojis[14],
-              currElem,
-              setCurrElem,
-              move,
-              setMove,
-              matchFound,
-              setMatchFound
-            );
-          }}
-        />
-        <EmojiCard
-          imgId={emojis[15]}
-          show={flip16}
-          execute={() => {
-            handleClick(
-              setFlip16,
-              store,
-              setStore,
-              emojis[15],
               currElem,
               setCurrElem,
               move,

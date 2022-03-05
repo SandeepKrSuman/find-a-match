@@ -8,7 +8,7 @@ export default function ScoreSheet(props) {
         color="warning"
         disabled={props.moves === 0 ? true : false}
       >
-        Match Found <br />[ {`${props.matches}`} / 8 ]
+        Match Found <br />[ {`${props.matches}`} / 6 ]
       </Button>
       <span style={{ margin: "0 10px" }} />
       <Button
