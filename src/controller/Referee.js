@@ -1,4 +1,10 @@
-let assetArray = [1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6];
+let assetArray1 = [1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6];
+let assetArray2 = [7, 8, 9, 10, 11, 12, 7, 8, 9, 10, 11, 12];
+let assetArray3 = [13, 14, 15, 16, 17, 18, 13, 14, 15, 16, 17, 18];
+
+const chooseRandomAssets = (start, end) => {
+  return Math.floor(Math.random() * (end - start + 1) + start);
+};
 
 const shuffle = (arr) => {
   let len = arr.length,
@@ -15,8 +21,17 @@ const shuffle = (arr) => {
 };
 
 const drawer = () => {
-  assetArray = shuffle(assetArray);
-  return assetArray;
+  const asset = chooseRandomAssets(1, 3);
+  if (asset === 1) {
+    assetArray1 = shuffle(assetArray1);
+    return assetArray1;
+  } else if (asset === 2) {
+    assetArray2 = shuffle(assetArray2);
+    return assetArray2;
+  } else if (asset === 3) {
+    assetArray3 = shuffle(assetArray3);
+    return assetArray3;
+  }
 };
 
 const handleClick = (
