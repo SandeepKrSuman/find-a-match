@@ -5,6 +5,7 @@ import Grid from "@mui/material/Grid";
 import { handleClick, drawer } from "../../controller/Referee";
 import ScoreSheet from "../ScoreSheet/ScoreSheet";
 import Button from "@mui/material/Button";
+import MatchMaker from "../MatchMaker/MatchMaker";
 
 const emojis = drawer();
 
@@ -260,6 +261,7 @@ export default function PlayGround() {
           Restart
         </Button>
       </div>
+      {matchFound === 6 && <MatchMaker totalmove={move} />}
     </Container>
   );
 }
