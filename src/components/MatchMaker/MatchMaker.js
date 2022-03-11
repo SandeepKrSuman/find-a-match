@@ -7,6 +7,12 @@ const Alert = React.forwardRef(function Alert(props, ref) {
 });
 
 export default function MatchMaker(props) {
+  const previous_score = parseInt(localStorage.getItem("famscore"));
+  const current_score = props.totalmove;
+  if (!previous_score || current_score < previous_score) {
+    localStorage.setItem("famscore", current_score);
+  }
+  const best_score = localStorage.getItem("famscore");
   const [succOpen, setSuccOpen] = useState(true);
 
   const handleSuccessClose = (event, reason) => {
@@ -29,7 +35,16 @@ export default function MatchMaker(props) {
         severity="success"
         sx={{ width: "100%" }}
       >
-        {`Match-Maker! You found all the matches in ${props.totalmove} moves.`}
+        {`Match-Maker ! `}
+        {`You found all the matches in ${props.totalmove} moves.`}
+        <br /> <br />
+        <p
+          style={{
+            textAlign: "center",
+            backgroundColor: "#ffffff",
+            color: "#000000",
+          }}
+        >{`Your All Time Best: ${best_score} moves.`}</p>
       </Alert>
     </Snackbar>
   );
