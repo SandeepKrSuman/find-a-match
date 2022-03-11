@@ -258,7 +258,7 @@ export default function PlayGround() {
             window.location.reload();
           }}
         >
-          Restart
+          {matchFound === 6 ? "Find Again" : "Restart"}
         </Button>
       </div>
       {matchFound === 6 && <MatchMaker totalmove={move} />}
