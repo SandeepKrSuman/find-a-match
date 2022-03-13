@@ -6,6 +6,7 @@ import { handleClick, drawer } from "../../controller/Referee";
 import ScoreSheet from "../ScoreSheet/ScoreSheet";
 import Button from "@mui/material/Button";
 import MatchMaker from "../MatchMaker/MatchMaker";
+import Intro from "../Intro/Intro";
 
 const emojis = drawer();
 
@@ -29,6 +30,7 @@ export default function PlayGround() {
 
   return (
     <Container maxWidth="sm">
+      <Intro />
       <ScoreSheet moves={move} matches={matchFound} />
       <Grid container columnSpacing={2} rowSpacing={4}>
         <EmojiCard
