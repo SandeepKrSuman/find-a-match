@@ -1,10 +1,11 @@
 import { Fragment } from "react";
+import BrandBar from "./components/BrandBar/BrandBar";
 import PlayGround from "./components/PlayGround/PlayGround";
 
 export default function App() {
   return (
     <Fragment>
-      <img alt="logo" src="fam-logo.gif" width={"150px"} />
+      <BrandBar />
       <PlayGround />
     </Fragment>
   );
