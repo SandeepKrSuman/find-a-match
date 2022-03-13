@@ -36,6 +36,7 @@ export default function MatchMaker(props) {
         sx={{ width: "100%" }}
       >
         {`Match-Maker ! `}
+        <br />
         {`You found all the matches in ${props.totalmove} moves.`}
         <br /> <br />
         <p
