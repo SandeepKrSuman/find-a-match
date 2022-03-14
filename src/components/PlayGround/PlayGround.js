@@ -4,9 +4,9 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import { handleClick, drawer } from "../../controller/Referee";
 import ScoreSheet from "../ScoreSheet/ScoreSheet";
-import Button from "@mui/material/Button";
 import MatchMaker from "../MatchMaker/MatchMaker";
 import Intro from "../Intro/Intro";
+import ReShare from "../ReShare/ReShare";
 
 const emojis = drawer();
 
@@ -250,19 +250,7 @@ export default function PlayGround() {
           }}
         />
       </Grid>
-      <div style={{ textAlign: "center", marginTop: "7%" }}>
-        <Button
-          variant="outlined"
-          size="large"
-          color="error"
-          disabled={move === 0 ? true : false}
-          onClick={() => {
-            window.location.reload();
-          }}
-        >
-          {matchFound === 6 ? "Find Again" : "Restart"}
-        </Button>
-      </div>
+      <ReShare move={move} matchFound={matchFound} />
       {matchFound === 6 && <MatchMaker totalmove={move} />}
     </Container>
   );
