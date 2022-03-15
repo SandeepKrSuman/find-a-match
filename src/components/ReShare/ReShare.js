@@ -2,6 +2,15 @@ import ShareIcon from "@mui/icons-material/Share";
 import ReplayIcon from "@mui/icons-material/Replay";
 import Button from "@mui/material/Button";
 export default function ReShare(props) {
+  function handleShareClick() {
+    const namePresent = localStorage.getItem("famuser");
+    if (namePresent) {
+      // don't ask for name.
+      console.log(namePresent);
+    } else {
+      props.setShowMenu(true);
+    }
+  }
   return (
     <div style={{ textAlign: "center", marginTop: "7%" }}>
       <Button
@@ -23,9 +32,7 @@ export default function ReShare(props) {
         color="error"
         disabled={props.matchFound === 6 ? false : true}
         endIcon={<ShareIcon />}
-        onClick={() => {
-          props.setShowMenu(true);
-        }}
+        onClick={handleShareClick}
       >
         Share
       </Button>
