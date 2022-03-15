@@ -23,6 +23,9 @@ export default function ReShare(props) {
         color="error"
         disabled={props.matchFound === 6 ? false : true}
         endIcon={<ShareIcon />}
+        onClick={() => {
+          props.setShowMenu(true);
+        }}
       >
         Share
       </Button>

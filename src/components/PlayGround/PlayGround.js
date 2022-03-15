@@ -7,6 +7,7 @@ import ScoreSheet from "../ScoreSheet/ScoreSheet";
 import MatchMaker from "../MatchMaker/MatchMaker";
 import Intro from "../Intro/Intro";
 import ReShare from "../ReShare/ReShare";
+import ShareMenu from "../ShareMenu/ShareMenu";
 
 const emojis = drawer();
 
@@ -27,6 +28,7 @@ export default function PlayGround() {
   const [currElem, setCurrElem] = useState(null);
   const [move, setMove] = useState(0);
   const [matchFound, setMatchFound] = useState(0);
+  const [showMenu, setShowMenu] = useState(false);
 
   return (
     <Container maxWidth="sm">
@@ -250,7 +252,8 @@ export default function PlayGround() {
           }}
         />
       </Grid>
-      <ReShare move={move} matchFound={matchFound} />
+      <ReShare move={move} matchFound={matchFound} setShowMenu={setShowMenu} />
+      <ShareMenu showMenu={showMenu} setShowMenu={setShowMenu} />
       {matchFound === 6 && <MatchMaker totalmove={move} />}
     </Container>
   );
