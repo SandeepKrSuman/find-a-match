@@ -253,7 +253,7 @@ export default function PlayGround() {
         />
       </Grid>
       <ReShare move={move} matchFound={matchFound} setShowMenu={setShowMenu} />
-      <ShareMenu showMenu={showMenu} setShowMenu={setShowMenu} />
+      <ShareMenu showMenu={showMenu} setShowMenu={setShowMenu} move={move} />
       {matchFound === 6 && <MatchMaker totalmove={move} />}
     </Container>
   );

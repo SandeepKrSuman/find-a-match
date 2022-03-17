@@ -8,6 +8,7 @@ import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import Slide from "@mui/material/Slide";
 import ShareIcon from "@mui/icons-material/Share";
+import { RWebShare } from "react-web-share";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -64,15 +65,26 @@ export default function ShareMenu(props) {
         <Button sx={{ color: "#707070" }} onClick={handleClose}>
           Cancel
         </Button>
-        <Button
-          variant="contained"
-          size="large"
-          color="error"
-          onClick={handleShare}
-          endIcon={<ShareIcon />}
+        <RWebShare
+          data={{
+            text: "Can you beat xyz score and find all the matches in less than x moves?",
+            url: `http://localhost:3000/share/${new Date().getTime()}-${
+              props.move
+            }-${new Date().getTime() * 2}`,
+            title: "Find A Match",
+          }}
+          onClick={() => {}}
         >
-          Share
-        </Button>
+          <Button
+            variant="contained"
+            size="large"
+            color="error"
+            onClick={handleShare}
+            endIcon={<ShareIcon />}
+          >
+            Share
+          </Button>
+        </RWebShare>
       </DialogActions>
     </Dialog>
   );
