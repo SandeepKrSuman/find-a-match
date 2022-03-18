@@ -73,7 +73,9 @@ export default function ShareMenu(props) {
             }-${new Date().getTime() * 2}`,
             title: "Find A Match",
           }}
-          onClick={() => {}}
+          onClick={() => {
+            handleShare();
+          }}
         >
           <Button
             variant="contained"
