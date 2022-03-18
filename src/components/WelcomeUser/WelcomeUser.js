@@ -7,17 +7,17 @@ import "./WelcomeUser.css";
 export default function WelcomeUser() {
   return (
     <div className="main-container">
-      <Typography className="typ404" variant="h4" component="div" gutterBottom>
+      <Typography className="typ" variant="h4" component="div" gutterBottom>
         xyz
       </Typography>
-      <Typography className="typ404" variant="h6" component="div" gutterBottom>
+      <Typography className="typ" variant="h6" component="div" gutterBottom>
         Challenged you to find all the matches in
       </Typography>
-      <Typography className="typ404" variant="h6" component="div" gutterBottom>
+      <Typography className="typ" variant="h6" component="div" gutterBottom>
         10 moves.
       </Typography>
       <br /> <br />
-      {/* <Link className="goback-btn-link" to="/"> */}
+      {/* <Link className="accept-link" to="/"> */}
       <Button
         variant="contained"
         color="success"

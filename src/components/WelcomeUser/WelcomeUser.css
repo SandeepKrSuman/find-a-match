@@ -16,12 +16,12 @@ body {
   overflow: hidden;
 }
 
-.typ404 {
+.typ {
   color: #fff;
 }
 
-.goback-btn-link,
-.goback-btn-link:hover {
+.accept-link,
+.accept-link:hover {
   text-decoration: none;
   outline: none;
 }
