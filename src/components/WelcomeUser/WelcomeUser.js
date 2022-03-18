@@ -4,7 +4,7 @@ import DoneOutlineIcon from "@mui/icons-material/DoneOutline";
 // import { Link } from "react-router-dom";
 import "./WelcomeUser.css";
 
-function Page404() {
+export default function WelcomeUser() {
   return (
     <div className="main-container">
       <Typography className="typ404" variant="h4" component="div" gutterBottom>
@@ -30,5 +30,3 @@ function Page404() {
     </div>
   );
 }
-
-export default Page404;
