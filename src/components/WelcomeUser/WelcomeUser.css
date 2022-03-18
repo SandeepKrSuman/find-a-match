@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.main-container {
+  padding: 5%;
+  padding-top: 30vh;
+  height: 100vh;
+  border: 3px;
+  box-sizing: border-box;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("./welcomebg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.typ404 {
+  color: #fff;
+}
+
+.goback-btn-link,
+.goback-btn-link:hover {
+  text-decoration: none;
+  outline: none;
+}
