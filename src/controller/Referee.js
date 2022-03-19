@@ -1,6 +1,8 @@
 let assetArray1 = [1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6];
 let assetArray2 = [7, 8, 9, 10, 11, 12, 7, 8, 9, 10, 11, 12];
 let assetArray3 = [13, 14, 15, 16, 17, 18, 13, 14, 15, 16, 17, 18];
+let assetArray4 = [19, 20, 21, 22, 23, 24, 19, 20, 21, 22, 23, 24];
+let assetArray5 = [25, 26, 27, 28, 29, 30, 25, 26, 27, 28, 29, 30];
 
 const chooseRandomAssets = (start, end) => {
   return Math.floor(Math.random() * (end - start + 1) + start);
@@ -21,7 +23,7 @@ const shuffle = (arr) => {
 };
 
 const drawer = () => {
-  const asset = chooseRandomAssets(1, 3);
+  const asset = chooseRandomAssets(1, 5);
   if (asset === 1) {
     assetArray1 = shuffle(assetArray1);
     return assetArray1;
@@ -31,6 +33,12 @@ const drawer = () => {
   } else if (asset === 3) {
     assetArray3 = shuffle(assetArray3);
     return assetArray3;
+  } else if (asset === 4) {
+    assetArray4 = shuffle(assetArray4);
+    return assetArray4;
+  } else if (asset === 5) {
+    assetArray5 = shuffle(assetArray5);
+    return assetArray5;
   }
 };
 
