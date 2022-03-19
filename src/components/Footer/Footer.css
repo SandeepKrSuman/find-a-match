@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Montaga&display=swap");
+
+.footer {
+  padding: 0 7% 0 7%;
+  color: #bbbbbb;
+  text-align: right;
+  font-family: "Montaga", serif;
+}
+
+.footlink {
+  color: #bbbbbb;
+  text-decoration: none;
+  font-family: "Montaga", serif;
+}
+
+.footlink:hover {
+  text-decoration: none;
+  color: #bbbbbb;
+}
+
+@media (max-width: 992px) {
+  .footer {
+    padding-top: 3%;
+    padding-bottom: 1%;
+    text-align: center;
+  }
+}

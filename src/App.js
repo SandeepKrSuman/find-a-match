@@ -1,5 +1,6 @@
 import { Fragment, useEffect } from "react";
 import BrandBar from "./components/BrandBar/BrandBar";
+import Footer from "./components/Footer/Footer";
 import PlayGround from "./components/PlayGround/PlayGround";
 
 export default function App() {
@@ -20,6 +21,7 @@ export default function App() {
     <Fragment>
       <BrandBar />
       <PlayGround />
+      <Footer />
     </Fragment>
   );
 }
