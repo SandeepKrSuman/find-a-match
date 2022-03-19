@@ -29,9 +29,9 @@ export default function ReShare(props) {
         <RWebShare
           data={{
             text: "Can you beat xyz score and find all the matches in less than x moves?",
-            url: `http://localhost:3000/share/${new Date().getTime()}-${
+            url: `http://localhost:3000/share?from=${namePresent}&x=${new Date().getTime()}&y=${
               props.move
-            }-${new Date().getTime() * 2}`,
+            }&z=${new Date().getTime() * 2}`,
             title: "Find A Match",
           }}
           onClick={() => {}}
