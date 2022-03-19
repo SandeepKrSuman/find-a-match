@@ -67,7 +67,7 @@ export default function ShareMenu(props) {
         </Button>
         <RWebShare
           data={{
-            text: "Can you beat xyz score and find all the matches in less than x moves?",
+            text: `Can you beat ${userName}'s score and find all the matches in less than ${props.move} moves?`,
             url: `https://findamatch.netlify.app/share?from=${userName}&x=${new Date().getTime()}&y=${
               props.move
             }&z=${new Date().getTime() * 2}`,
