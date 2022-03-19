@@ -31,7 +31,7 @@ export default function PlayGround() {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <Container maxWidth="sm">
+    <Container sx={{ marginBottom: "2rem" }} maxWidth="sm">
       <Intro />
       <ScoreSheet moves={move} matches={matchFound} />
       <Grid container columnSpacing={2} rowSpacing={4}>
