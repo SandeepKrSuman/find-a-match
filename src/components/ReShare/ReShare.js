@@ -28,7 +28,7 @@ export default function ReShare(props) {
       {namePresent ? (
         <RWebShare
           data={{
-            text: `Can you beat ${namePresent}'s score and find all the matches in less than ${props.move} moves?`,
+            text: `Wow! matchmaker ${namePresent} found all the matches in ${props.move} moves.\nCan you beat ${namePresent}'s score?\nClick on the link to accept the challenge.\n`,
             url: `https://findamatch.netlify.app/share?from=${namePresent}&x=${new Date().getTime()}&y=${
               props.move
             }&z=${new Date().getTime() * 2}`,
