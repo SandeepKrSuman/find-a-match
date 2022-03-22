@@ -68,6 +68,8 @@ img {
 
 .card__face--back {
   transform: rotateY(180deg);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .do-not-click {
