@@ -63,6 +63,7 @@ img {
   font-weight: bold;
   font-size: 40px;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .card__face--back {
