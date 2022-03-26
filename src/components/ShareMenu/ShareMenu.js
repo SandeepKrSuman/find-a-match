@@ -10,6 +10,16 @@ import Slide from "@mui/material/Slide";
 import ShareIcon from "@mui/icons-material/Share";
 import { RWebShare } from "react-web-share";
 
+const randids = () => {
+  let rid = "";
+  for (var i = 0; i < 10; i++)
+    rid +=
+      "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890".charAt(
+        Math.floor(Math.random() * 62)
+      );
+  return rid;
+};
+
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
@@ -68,9 +78,9 @@ export default function ShareMenu(props) {
         <RWebShare
           data={{
             text: `Wow! matchmaker ${userName} found all the matches in ${props.move} moves.\nCan you beat ${userName}'s score?\nClick on the link to accept the challenge.\n`,
-            url: `https://findamatch.netlify.app/share?from=${userName}&x=${new Date().getTime()}&y=${
+            url: `https://findamatch.netlify.app/share?diff=${randids()}&from=${userName}&x=${new Date().getTime()}${randids()}&y=${randids()}-${
               props.move
-            }&z=${new Date().getTime() * 2}`,
+            }&z=${new Date().getTime() * 2}${randids()}`,
             title: "Find A Match",
           }}
           onClick={() => {

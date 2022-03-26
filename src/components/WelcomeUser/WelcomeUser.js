@@ -11,8 +11,15 @@ export default function WelcomeUser() {
       ? searchParams.get("from")
       : "Your Bestie";
   const moves =
-    searchParams.get("y") && parseInt(searchParams.get("y")) > 6
-      ? parseInt(searchParams.get("y"))
+    searchParams.get("y") &&
+    parseInt(
+      searchParams.get("y").substring(searchParams.get("y").indexOf("-") + 1)
+    ) > 6
+      ? parseInt(
+          searchParams
+            .get("y")
+            .substring(searchParams.get("y").indexOf("-") + 1)
+        )
       : "minimum number of";
   return (
     <div className="main-container">
