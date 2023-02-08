@@ -31,10 +31,10 @@ export default function PlayGround() {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <Container sx={{ marginBottom: "2rem" }} maxWidth="sm">
+    <Container sx={{ textAlign: "center", marginBottom: "2rem" }} maxWidth="sm">
       <Intro />
       <ScoreSheet moves={move} matches={matchFound} />
-      <Grid container columnSpacing={2} rowSpacing={4}>
+      <Grid container sx={{ margin: "0" }}>
         <EmojiCard
           imgId={emojis[0]}
           show={flip1}
