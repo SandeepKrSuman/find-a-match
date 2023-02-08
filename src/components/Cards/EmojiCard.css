@@ -10,19 +10,16 @@ img {
 .emoji {
   width: 100%;
   max-width: 100%;
+  max-height: 100%;
   box-shadow: rgba(60, 64, 67, 0.5) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.25) 0px 1px 3px 1px;
   border-radius: 4px;
   cursor: pointer;
-  padding: 5%;
+  padding: 3%;
 }
 
 .emoji-front {
   opacity: 0.4;
-}
-
-.emoji-container {
-  text-align: center;
 }
 
 .emoji-container:hover {
@@ -31,13 +28,14 @@ img {
 
 @keyframes pop {
   50% {
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 }
 
 .card {
+  text-align: center;
   position: relative;
-  width: 90%;
+  width: auto;
   height: 7rem;
   cursor: pointer;
   transform-style: preserve-3d;
@@ -63,14 +61,28 @@ img {
 
 .card__face--back {
   transform: rotateY(180deg);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .do-not-click {
   pointer-events: none;
 }
 
-@media (min-width: 455px) and (max-width: 992px) {
+@media (min-width: 530px) and (max-width: 900px) {
   .card {
     height: 10rem;
+  }
+}
+
+@media (min-width: 460px) and (max-width: 530px) {
+  .card {
+    height: 9rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .card {
+    height: 5.5rem;
   }
 }
