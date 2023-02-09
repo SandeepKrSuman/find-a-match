@@ -41,6 +41,7 @@ img {
   transform-style: preserve-3d;
   transform-origin: center right;
   transition: transform 1s;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .card.is-flipped {
