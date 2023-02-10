@@ -14,9 +14,14 @@
 
 <br><br>
 
-Made with ReactJS and ❤ by [SandeepKrSuman](https://github.com/SandeepKrSuman)
+<p align="center">Made with ReactJS and ❤ by <a href="https://github.com/SandeepKrSuman">SandeepKrSuman</a></p>
 
 <br>
-  
-![](https://img.shields.io/badge/-powered%20by-white?style=for-the-badge)
-[![](https://img.shields.io/badge/MUI-0081CB?style=for-the-badge&logo=mui&logoColor=white)](https://mui.com/)
+
+<p align="center"><a href="https://mui.com"><img src="https://img.shields.io/badge/-powered%20by-white?style=for-the-badge"><img src="https://img.shields.io/badge/MUI-0081CB?style=for-the-badge&logo=mui&logoColor=white"></a></p>
+
+<br><br>
+
+#### Attribution
+
+_The emoji graphics are from [Twemoji](https://twemoji.twitter.com/), licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)_
