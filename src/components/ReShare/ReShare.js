@@ -3,14 +3,31 @@ import ReplayIcon from "@mui/icons-material/Replay";
 import Button from "@mui/material/Button";
 import { RWebShare } from "react-web-share";
 
-const randids = () => {
-  let rid = "";
-  for (var i = 0; i < 10; i++)
-    rid +=
-      "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890".charAt(
-        Math.floor(Math.random() * 62)
-      );
-  return rid;
+const baseUrl = "https://findamatch.netlify.app/share";
+
+const encodeName = (str, n) => {
+  const ALPHABET_LENGTH = 26;
+  const ALPHABET = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  let shifted = "";
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
+    let index = ALPHABET.indexOf(char);
+    if (index !== -1) {
+      let shiftedIndex = (index + n) % ALPHABET_LENGTH;
+      char = ALPHABET[shiftedIndex];
+    }
+    shifted += char;
+  }
+  return shifted;
+};
+
+const encodeMove = (rawMove) => {
+  let encodedMove = "";
+  while (rawMove > 0) {
+    encodedMove = (rawMove & 1) + encodedMove;
+    rawMove = rawMove >> 1;
+  }
+  return encodedMove;
 };
 
 export default function ReShare(props) {
@@ -40,9 +57,9 @@ export default function ReShare(props) {
         <RWebShare
           data={{
             text: `Wow! matchmaker ${namePresent} found all the matches in ${props.move} moves.\nCan you beat ${namePresent}'s score?\nClick on the link to accept the challenge.\n`,
-            url: `https://findamatch.netlify.app/share?diff=${randids()}&from=${namePresent}&x=${new Date().getTime()}${randids()}&y=${randids()}-${
-              props.move
-            }&z=${new Date().getTime() * 2}${randids()}`,
+            url: `${baseUrl}?fr=${encodeName(namePresent, 3)}&scr=${encodeMove(
+              parseInt(props.move)
+            )}&utm=fam`,
             title: "Find A Match",
           }}
           onClick={() => {}}
