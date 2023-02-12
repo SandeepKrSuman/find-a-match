@@ -20,10 +20,10 @@ export default function App() {
   }, []);
   return (
     <Fragment>
-      <CookieConsent />
       <BrandBar />
       <PlayGround />
       <Footer />
+      <CookieConsent />
     </Fragment>
   );
 }

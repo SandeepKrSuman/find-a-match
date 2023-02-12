@@ -9,7 +9,7 @@ const CookieConsent = () => {
   useEffect(() => {
     setTimeout(() => {
       document.querySelector(".consent-card").classList.add("scale-up");
-    }, 500);
+    }, 3500);
   }, []);
 
   const handleAccept = () => {
