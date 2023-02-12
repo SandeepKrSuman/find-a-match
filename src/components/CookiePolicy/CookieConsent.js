@@ -5,10 +5,11 @@ import "./CookieConsent.css";
 const CookieConsent = () => {
   const consent = localStorage.getItem("famconsent") === "true" ? true : false;
   const [accepted, setAccepted] = useState(consent ? consent : false);
+  const [scaleup, setScaleup] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
-      document.querySelector(".consent-card").classList.add("scale-up");
+      setScaleup(true);
     }, 3500);
   }, []);
 
@@ -21,7 +22,7 @@ const CookieConsent = () => {
 
   return (
     <div className="consent-container">
-      <div className="consent-card">
+      <div className={`${scaleup ? "consent-card scale-up" : "consent-card"}`}>
         <div className="cookie-img">
           <img src="/assets/cookie.png" alt="cookie" />
         </div>
