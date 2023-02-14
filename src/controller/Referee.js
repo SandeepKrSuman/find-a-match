@@ -30,39 +30,44 @@ const shuffle = (arr) => {
 
 const drawer = () => {
   const asset = chooseRandomAssets(1, 11);
-  if (asset === 1) {
-    assetArray1 = shuffle(assetArray1);
-    return assetArray1;
-  } else if (asset === 2) {
-    assetArray2 = shuffle(assetArray2);
-    return assetArray2;
-  } else if (asset === 3) {
-    assetArray3 = shuffle(assetArray3);
-    return assetArray3;
-  } else if (asset === 4) {
-    assetArray4 = shuffle(assetArray4);
-    return assetArray4;
-  } else if (asset === 5) {
-    assetArray5 = shuffle(assetArray5);
-    return assetArray5;
-  } else if (asset === 6) {
-    assetArray6 = shuffle(assetArray6);
-    return assetArray6;
-  } else if (asset === 7) {
-    assetArray7 = shuffle(assetArray7);
-    return assetArray7;
-  } else if (asset === 8) {
-    assetArray8 = shuffle(assetArray8);
-    return assetArray8;
-  } else if (asset === 9) {
-    assetArray9 = shuffle(assetArray9);
-    return assetArray9;
-  } else if (asset === 10) {
-    assetArray10 = shuffle(assetArray10);
-    return assetArray10;
-  } else if (asset === 11) {
-    assetArray11 = shuffle(assetArray11);
-    return assetArray11;
+
+  switch (asset) {
+    case 1:
+      assetArray1 = shuffle(assetArray1);
+      return assetArray1;
+    case 2:
+      assetArray2 = shuffle(assetArray2);
+      return assetArray2;
+    case 3:
+      assetArray3 = shuffle(assetArray3);
+      return assetArray3;
+    case 4:
+      assetArray4 = shuffle(assetArray4);
+      return assetArray4;
+    case 5:
+      assetArray5 = shuffle(assetArray5);
+      return assetArray5;
+    case 6:
+      assetArray6 = shuffle(assetArray6);
+      return assetArray6;
+    case 7:
+      assetArray7 = shuffle(assetArray7);
+      return assetArray7;
+    case 8:
+      assetArray8 = shuffle(assetArray8);
+      return assetArray8;
+    case 9:
+      assetArray9 = shuffle(assetArray9);
+      return assetArray9;
+    case 10:
+      assetArray10 = shuffle(assetArray10);
+      return assetArray10;
+    case 11:
+      assetArray11 = shuffle(assetArray11);
+      return assetArray11;
+    default:
+      assetArray1 = shuffle(assetArray1);
+      return assetArray1;
   }
 };
 
