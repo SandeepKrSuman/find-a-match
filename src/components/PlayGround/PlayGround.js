@@ -9,7 +9,13 @@ import Intro from "../Intro/Intro";
 import ReShare from "../ReShare/ReShare";
 import ShareMenu from "../ShareMenu/ShareMenu";
 
-const emojis = drawer();
+let emojis = drawer();
+
+const drawEmoji = () => {
+  setTimeout(() => {
+    emojis = drawer();
+  }, 90);
+};
 
 export default function PlayGround() {
   const [flip1, setFlip1] = useState(false);
@@ -252,7 +258,30 @@ export default function PlayGround() {
           }}
         />
       </Grid>
-      <ReShare move={move} matchFound={matchFound} setShowMenu={setShowMenu} />
+      <ReShare
+        args={{
+          setFlip1,
+          setFlip2,
+          setFlip3,
+          setFlip4,
+          setFlip5,
+          setFlip6,
+          setFlip7,
+          setFlip8,
+          setFlip9,
+          setFlip10,
+          setFlip11,
+          setFlip12,
+          setStore,
+          setCurrElem,
+          move,
+          setMove,
+          matchFound,
+          setMatchFound,
+          setShowMenu,
+          drawEmoji,
+        }}
+      />
       <ShareMenu showMenu={showMenu} setShowMenu={setShowMenu} move={move} />
       {matchFound === 6 && <MatchMaker totalmove={move} />}
     </Container>

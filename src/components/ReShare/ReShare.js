@@ -34,8 +34,28 @@ export default function ReShare(props) {
   const namePresent = localStorage.getItem("famuser");
   function handleShareClick() {
     if (!namePresent) {
-      props.setShowMenu(true);
+      props.args.setShowMenu(true);
     }
+  }
+  function handleRestart() {
+    props.args.setFlip1(false);
+    props.args.setFlip2(false);
+    props.args.setFlip3(false);
+    props.args.setFlip4(false);
+    props.args.setFlip5(false);
+    props.args.setFlip6(false);
+    props.args.setFlip7(false);
+    props.args.setFlip8(false);
+    props.args.setFlip9(false);
+    props.args.setFlip10(false);
+    props.args.setFlip11(false);
+    props.args.setFlip12(false);
+    props.args.setStore(null);
+    props.args.setCurrElem(null);
+    props.args.setMove(0);
+    props.args.setMatchFound(0);
+    props.args.setShowMenu(false);
+    props.args.drawEmoji();
   }
   return (
     <div style={{ textAlign: "center", marginTop: "7%" }}>
@@ -43,22 +63,20 @@ export default function ReShare(props) {
         variant="outlined"
         size="large"
         color="error"
-        disabled={props.move === 0 ? true : false}
-        onClick={() => {
-          window.location.reload();
-        }}
+        disabled={props.args.move === 0 ? true : false}
+        onClick={handleRestart}
         endIcon={<ReplayIcon />}
       >
-        {props.matchFound === 6 ? "Find Again" : "Restart"}
+        {props.args.matchFound === 6 ? "Find Again" : "Restart"}
       </Button>
       <span style={{ margin: "0 10px" }} />
 
       {namePresent ? (
         <RWebShare
           data={{
-            text: `Wow! matchmaker ${namePresent} found all the matches in ${props.move} moves.\nCan you beat ${namePresent}'s score?\nClick on the link to accept the challenge.\n`,
+            text: `Wow! matchmaker ${namePresent} found all the matches in ${props.args.move} moves.\nCan you beat ${namePresent}'s score?\nClick on the link to accept the challenge.\n`,
             url: `${baseUrl}?fr=${encodeName(namePresent, 3)}&scr=${encodeMove(
-              parseInt(props.move)
+              parseInt(props.args.move)
             )}&utm=fam`,
             title: "Find A Match",
           }}
@@ -68,7 +86,7 @@ export default function ReShare(props) {
             variant="outlined"
             size="large"
             color="error"
-            disabled={props.matchFound === 6 ? false : true}
+            disabled={props.args.matchFound === 6 ? false : true}
             endIcon={<ShareIcon />}
           >
             Share
@@ -79,7 +97,7 @@ export default function ReShare(props) {
           variant="outlined"
           size="large"
           color="error"
-          disabled={props.matchFound === 6 ? false : true}
+          disabled={props.args.matchFound === 6 ? false : true}
           endIcon={<ShareIcon />}
           onClick={handleShareClick}
         >
