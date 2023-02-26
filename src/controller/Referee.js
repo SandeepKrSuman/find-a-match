@@ -10,8 +10,22 @@ let assetArray9 = [49, 50, 51, 52, 53, 54, 49, 50, 51, 52, 53, 54];
 let assetArray10 = [55, 56, 57, 58, 59, 60, 55, 56, 57, 58, 59, 60];
 let assetArray11 = [61, 62, 63, 64, 65, 66, 61, 62, 63, 64, 65, 66];
 
+let selected = [];
+
 const chooseRandomAssets = (start, end) => {
-  return Math.floor(Math.random() * (end - start + 1) + start);
+  if (selected.length === end - start + 1) {
+    selected = [];
+  }
+
+  let randomIndex = Math.floor(Math.random() * (end - start + 1) + start);
+
+  while (selected.includes(randomIndex)) {
+    randomIndex = Math.floor(Math.random() * (end - start + 1) + start);
+  }
+
+  selected.push(randomIndex);
+
+  return randomIndex;
 };
 
 const shuffle = (arr) => {
