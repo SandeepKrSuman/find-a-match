@@ -22,6 +22,14 @@ export default function FamAppPrivacy() {
           game-related data, such as high scores, which are saved locally on the
           user's device to enhance the user experience.
         </p>
+        <p>
+          We use Google's AdMob service to show advertisements in our mobile
+          app. AdMob may collect certain information about you and your device,
+          such as your device type, IP address, and advertising ID. This
+          information may be used to show you personalized ads based on your
+          interests and preferences. We do not collect or store any personal
+          data about you ourselves.
+        </p>
 
         <div className="section-title">2. Local Storage</div>
         <p>
@@ -40,19 +48,30 @@ export default function FamAppPrivacy() {
           note that we do not store any information at our end. The data stored
           in local storage remains on the user's device.
         </p>
-
-        <div className="section-title">4. Children's Privacy</div>
         <p>
-          The App is intended for use by general audiences. While we do not
-          collect any personal information from our users, we believe that it is
-          important for parents and guardians to be aware of their children's
-          online activities and to help them make safe and responsible choices.
-          We encourage parents and guardians to talk to their children about
-          online privacy and security, and to set appropriate boundaries and
-          guidelines for app usage.
+          The information collected by AdMob may be used to show you
+          personalized ads and to improve the effectiveness of our advertising
+          campaigns. We do not use your personal data for any other purposes.
         </p>
 
-        <div className="section-title">5. Data Security</div>
+        <div className="section-title">4. Data Sharing</div>
+        <p>
+          We do not share any personal data about you with third parties
+          ourselves. However, AdMob may share certain information with its
+          advertising partners and service providers in order to show you
+          personalized ads.
+        </p>
+
+        <div className="section-title">5. Your Rights</div>
+        <p>
+          You have the right to control the data that AdMob collects about you
+          and to opt-out of personalized advertising. You can do this by
+          adjusting your device settings, using opt-out tools provided by AdMob,
+          not giving the consent by clicking "do not consent" or closing the
+          consent menu, etc.
+        </p>
+
+        <div className="section-title">6. Data Security</div>
         <p>
           We take the security of the information we collect very seriously and
           have implemented measures to protect it from unauthorized access, use,
@@ -75,14 +94,25 @@ export default function FamAppPrivacy() {
           device.
         </p>
 
-        <div className="section-title">6. Changes to this Policy</div>
+        <div className="section-title">7. Children's Privacy</div>
+        <p>
+          The App is intended for use by general audiences. While we do not
+          collect any personal information from our users, we believe that it is
+          important for parents and guardians to be aware of their children's
+          online activities and to help them make safe and responsible choices.
+          We encourage parents and guardians to talk to their children about
+          online privacy and security, and to set appropriate boundaries and
+          guidelines for app usage.
+        </p>
+
+        <div className="section-title">8. Changes to this Policy</div>
         <p>
           We may update this Cookie Policy & Privacy Statement from time to time
           to reflect changes in our privacy practices. We will notify users of
           any changes by posting the updated policy on our website.
         </p>
 
-        <div className="section-title">7. Contact Us</div>
+        <div className="section-title">9. Contact Us</div>
         <p>
           If you have any questions or concerns about this Cookie Policy &
           Privacy Statement, please raise an issue{" "}
