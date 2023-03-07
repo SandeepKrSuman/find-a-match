@@ -1,7 +1,7 @@
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import DoneOutlineIcon from "@mui/icons-material/DoneOutline";
-import { Link, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import "./WelcomeUser.css";
 
 const decodeName = (str, n) => {
@@ -53,7 +53,11 @@ export default function WelcomeUser() {
         {`${moves} moves.`}
       </Typography>
       <br /> <br />
-      <Link className="accept-link" to="/">
+      <a
+        className="accept-link"
+        href="https://play.google.com/store/apps/details?id=com.famapp"
+        rel="noreferrer noopener"
+      >
         <Button
           variant="contained"
           color="success"
@@ -62,7 +66,7 @@ export default function WelcomeUser() {
         >
           Accept
         </Button>
-      </Link>
+      </a>
     </div>
   );
 }
