@@ -8,6 +8,7 @@ import MatchMaker from "../MatchMaker/MatchMaker";
 import Intro from "../Intro/Intro";
 import ReShare from "../ReShare/ReShare";
 import ShareMenu from "../ShareMenu/ShareMenu";
+import PopConfetti from "../Confetti/Confetti";
 
 let emojis = drawer();
 
@@ -284,6 +285,7 @@ export default function PlayGround() {
       />
       <ShareMenu showMenu={showMenu} setShowMenu={setShowMenu} move={move} />
       {matchFound === 6 && <MatchMaker totalmove={move} />}
+      {matchFound === 6 && <PopConfetti />}
     </Container>
   );
 }
